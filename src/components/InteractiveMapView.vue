@@ -21,7 +21,7 @@ const monumentsData = {
   piramideGuiza: {
     name: 'Gran Piràmide de Guiza',
     details: {
-      description: "És la piràmide més gran de les tres piràmides de Guiza. Va ser l'edifici més alt del món durant més de 3.800 anys? Amb els seus aproximadament 146 metres d'alçada original, no va ser superada fins a la construcció de la catedral de Lincoln a Anglaterra al segle XIV",
+      description: "És la piràmide més gran de les tres piràmides de Guiza. Va ser l'edifici més alt del món durant més de 3.800 anys. Amb els seus aproximadament 146 metres d'alçada original, no va ser superada fins a la construcció de la catedral de Lincoln a Anglaterra al segle XIV",
       location: 'Guiza, Egipte',
       civilization: 'Antic Egipte',
       creationDate: "c. 2580–2560 a.C.",

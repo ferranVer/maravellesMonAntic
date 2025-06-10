@@ -16,57 +16,30 @@ import svgContent from '../assets/mapaSketchPlain2.svg?raw';
   </div>
 </template>
 
+<!-- En src/components/Mapa.vue -->
 <style scoped>
-/*
-  ESTILO DEL CONTENEDOR PRINCIPAL
-  Define la "tarjeta" que contiene el mapa.
-*/
+/* Contenedor principal de la "tarjeta" del mapa */
 .mapa-container {
-  width: 100%; /* Ocupa todo el ancho que le da su padre en App.vue */
-  background-color: white;
-  padding: 1.5rem; /* Un padding razonable */
-  box-sizing: border-box;
-}
-
-/*
-  CONTENEDOR DEL MAPA (WRAPPER)
-  Este div se usa para contener el mapa escalado y evitar que se desborde.
-  También define el tamaño real del mapa.
-*/
-.mapa-wrapper {
   width: 100%;
-  margin: 0 auto; /* Centra el mapa si el contenedor es más grande */
-  overflow: hidden; /* Opcional: recorta lo que se salga si usas scale */
+  background-color: white;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  /* La clave: Oculta lo que el mapa de dentro intente sacar */
+  overflow: hidden; 
 }
 
-/*
-  ESTILO DEL MAPA RENDERIZADO
-  Aquí controlamos el tamaño y la apariencia del SVG inyectado.
-*/
+/* El mapa zoomeado y centrado */
 .mapa-renderizado {
-  /*
-    SOLUCIÓN AL 'transform: scale(2)':
-    En lugar de escalar visualmente, aumentamos el tamaño real.
-    Usamos márgenes negativos para "recuperar" el espacio vacío que se genera
-    al hacer zoom y centrar el mapa.
-    
-    Imagina que tienes una foto. En lugar de ponerle una lupa (scale),
-    haces una foto más grande (width/height 200%) y la mueves (-50%)
-    para que el centro quede en el mismo sitio.
-  */
-  width: 200%; 
+  /* Hacemos el mapa el doble de grande */
+  width: 200%;
   height: 200%;
-  margin-left: -50%;
-  margin-top: -50%;
-  transform: none; /* Nos aseguramos de NO usar 'scale' */
+
+  /* Lo centramos moviéndolo a la izquierda y arriba */
+  /* Esto asegura que el centro del mapa ampliado quede en el centro del contenedor */
+  transform: translate(-25%, -25%);
 }
 
-/*
-  ESTILOS PARA LOS ELEMENTOS DENTRO DEL SVG
-  Usamos :deep() para que los estilos scoped puedan afectar al contenido de v-html.
-*/
-
-/* 1. ESTADO BASE (SOLO PARA LOS MONUMENTOS) */
+/* ESTILOS DE INTERACCIÓN (Usando :deep()) */
 .mapa-renderizado :deep(#teatroMerida),
 .mapa-renderizado :deep(#estatuaZeus),
 .mapa-renderizado :deep(#temploArtemisa),
@@ -82,7 +55,6 @@ import svgContent from '../assets/mapaSketchPlain2.svg?raw';
   cursor: pointer;
 }
 
-/* 2. ESTADO HOVER EN EL CONTENEDOR */
 .mapa-renderizado:hover :deep(#teatroMerida),
 .mapa-renderizado:hover :deep(#estatuaZeus),
 .mapa-renderizado:hover :deep(#temploArtemisa),
@@ -96,7 +68,6 @@ import svgContent from '../assets/mapaSketchPlain2.svg?raw';
   opacity: 0.3;
 }
 
-/* 3. ESTADO HOVER EN EL ELEMENTO ESPECÍFICO */
 .mapa-renderizado :deep(#teatroMerida:hover),
 .mapa-renderizado :deep(#estatuaZeus:hover),
 .mapa-renderizado :deep(#temploArtemisa:hover),
@@ -109,5 +80,4 @@ import svgContent from '../assets/mapaSketchPlain2.svg?raw';
 .mapa-renderizado :deep(#coliseoRomano:hover) {
   opacity: 1;
 }
-
 </style>
