@@ -31,12 +31,12 @@ import svgContent from '../assets/mapaSketchPlain2.svg?raw';
 /* El mapa zoomeado y centrado */
 .mapa-renderizado {
   /* Hacemos el mapa el doble de grande */
-  width: 200%;
-  height: 200%;
+  width: 150%;
+  height: 150%;
 
   /* Lo centramos moviéndolo a la izquierda y arriba */
   /* Esto asegura que el centro del mapa ampliado quede en el centro del contenedor */
-  transform: translate(-25%, -25%);
+  transform: translate(-15%, -5%);
 }
 
 /* ESTILOS DE INTERACCIÓN (Usando :deep()) */
