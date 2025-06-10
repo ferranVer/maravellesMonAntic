@@ -1,0 +1,56 @@
+# Nombre del flujo de trabajo que verás en la pestaña "Actions" de GitHub
+name: Deploy Vue App to GitHub Pages
+
+# Se ejecuta cada vez que haces un 'push' a la rama 'main'
+on:
+  push:
+    branches: [main]
+
+# Permisos necesarios para que la acción pueda funcionar correctamente
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Define los trabajos (jobs) que se ejecutarán
+jobs:
+  # Solo hay un trabajo, llamado 'deploy'
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Clona tu repositorio para tener acceso al código
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configura Node.js para poder usar npm
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Puedes usar 18 o la versión que prefieras
+          cache: 'npm'
+
+      # 3. Instala todas las dependencias del proyecto
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Construye la aplicación (ejecuta 'npm run build')
+      - name: Build
+        run: npm run build
+
+      # 5. Prepara la carpeta 'dist' para ser subida
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 6. Sube la carpeta 'dist' como un artefacto
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+      # 7. Despliega el artefacto en GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
