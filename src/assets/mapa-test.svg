@@ -1,0 +1,16 @@
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 1600 900"
+>
+  <rect 
+    id="test-rect"
+    x="400" 
+    y="250" 
+    width="800" 
+    height="400" 
+    fill="tomato" 
+  />
+  <text x="800" y="460" font-family="Arial, sans-serif" font-size="50" text-anchor="middle" fill="white">
+    Pasa el ratón aquí
+  </text>
+</svg>
