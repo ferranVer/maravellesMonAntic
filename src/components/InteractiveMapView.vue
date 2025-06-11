@@ -9,10 +9,10 @@ const monumentsData = {
   coliseoRomano: {
     name: 'Coliseu Romà',
     details: {
-      location: 'Roma, Italia',
+      location: 'Roma, Itàlia',
       civilization: 'Imperi Romà',
       creationDate: '70-80 d.C.',
-      destructionDate: 'Parcialment destruit per terratrèmols i saquejos',
+      destructionDate: 'Parcialment destruït per terratrèmols i saquejos',
       description: 'El Coliseu Romà és un antic amfiteatre situat al centre de Roma, considerat una de les meravelles arquitectòniques del món antic.',
       author: 'Emperadors Vespasià y Tito',
       finalidad: 'Arena de gladiadors i espectacles públics',
