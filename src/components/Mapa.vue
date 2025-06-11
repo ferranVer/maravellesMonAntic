@@ -20,23 +20,23 @@ import svgContent from '../assets/mapaSketchPlain2.svg?raw';
 <style scoped>
 /* Contenedor principal de la "tarjeta" del mapa */
 .mapa-container {
-  width: 100%;
+  width:auto;
   background-color: white;
   padding: 1.5rem;
   box-sizing: border-box;
   /* La clave: Oculta lo que el mapa de dentro intente sacar */
-  overflow: hidden; 
+  overflow:hidden; 
 }
 
 /* El mapa zoomeado y centrado */
 .mapa-renderizado {
   /* Hacemos el mapa el doble de grande */
-  width: 150%;
-  height: 150%;
+  width: 130%;
+  height: 130%;
 
   /* Lo centramos moviéndolo a la izquierda y arriba */
   /* Esto asegura que el centro del mapa ampliado quede en el centro del contenedor */
-  transform: translate(-15%, -5%);
+  transform: translate(-10%, -5%);
 }
 
 /* ESTILOS DE INTERACCIÓN (Usando :deep()) */

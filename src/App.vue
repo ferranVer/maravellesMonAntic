@@ -1,31 +1,40 @@
+<!-- src/App.vue -->
 <script setup>
-import InteractiveMapView from './components/InteractiveMapView.vue';
+// 1. Importa 'onMounted' de Vue y la librería AOS
+import { onMounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // <-- ¡MUY IMPORTANTE! Importa los estilos aquí
+
+// 2. Importa tus componentes como ya hacías
 import PageHeader from './components/PageHeader.vue';
 import PersonalChoice from './components/PersonalChoice.vue';
+import InteractiveMapView from './components/InteractiveMapView.vue';
 
+// 3. Usa onMounted para inicializar AOS
+onMounted(() => {
+  AOS.init({
+    duration: 800,      // Duración de la animación
+    easing: 'ease-in-out', // Curva de suavizado
+    once: true,         // La animación solo ocurre una vez
+    offset: 50,         // Se activa 50px antes de que el elemento entre en pantalla
+  });
+});
 </script>
 
+<!-- El <template> y el <style> se mantienen igual que los tenías -->
 <template>
-  
   <div id="app-container">
-     <div class="component-wrapper">
-      <PageHeader />
+    <div class="component-wrapper">
+      <PageHeader data-aos="fade-down" /> <!-- Puedes animar todos si quieres -->
     </div>
-
-    <!-- Celda 3: Contiene el Mapa -->
-    <div class="map-wrapper">
+     <div class="map-wrapper">
       <InteractiveMapView />
     </div>
-    
-    <!-- Celda 2: Contiene la Elección Personal -->
     <div class="component-wrapper">
-      <PersonalChoice />
+      <PersonalChoice /> <!-- Este ya tiene su propio data-aos dentro -->
     </div>
-
-    
-  </div>
    
-  
+  </div>
 </template>
 
 <style scoped>
@@ -53,7 +62,7 @@ import PersonalChoice from './components/PersonalChoice.vue';
   box-sizing: border-box;
 }
 .map-wrapper {
-  width: 70%;
+  width: 100%;
   max-width: 900px; /* <-- ¡AQUÍ ESTÁ LA MAGIA! Aumenta este valor como quieras */
 }
 </style>
@@ -62,6 +71,12 @@ import PersonalChoice from './components/PersonalChoice.vue';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-
+}
+body,
+button,
+input,
+textarea,
+select {
+  font-family: 'Gideon Roman', serif; /* 'serif' es la fuente de respaldo */
 }
 </style>

@@ -5,7 +5,8 @@
     <h2 class="subtitle">
       Ferran Verdú Caballero
     </h2>
-    <p>Geografia i Història 2024-2025</p>
+    <p>Geografia i Història 2024-2025 <span>| 3a Avaluació</span></p>
+    
   </header>
 </template>
 
