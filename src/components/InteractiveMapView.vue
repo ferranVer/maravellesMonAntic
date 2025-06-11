@@ -105,12 +105,12 @@ const monumentsData = {
   teatroMerida: {
     name: 'Teatre de Mèrida',
     details: {
-      description: 'El Teatre de Mèrida és un antic teatre romà a Espanya, famós per la seua excel·lenent estat de conservació i el seu ús actual per a representacions teatrals. El Teatre de Mèrida va ser construït fa més de 2.000 anys, però va estar enterrat i oblidat durant segles, fins que al segle XX es van començar les excavacions que el van recuperar gairebé intacte',
+      description: "El Teatre de Mèrida és un antic teatre romà a Espanya, famós per l'excel·lenent estat de conservació i el seu ús actual per a representacions teatrals. El Teatre de Mèrida va ser construït fa més de 2.000 anys, però va estar enterrat i oblidat durant segles, fins que al segle XX es van començar les excavacions que el van recuperar gairebé intacte",
       location: 'Mèrida, Espanya',
       civilization: 'Imperi Romà',
       creationDate: '15 a.C.',
       destructionDate: 'Continua en peu',
-      finalidad: 'Espai per a representacions teatrals i events culturals',
+      finalidad: 'Espai per a representacions teatrals i esdeveniments culturals',
     },
   },
       jardinesBabilonia: {
