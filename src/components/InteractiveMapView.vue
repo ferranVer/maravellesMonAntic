@@ -34,7 +34,7 @@ const monumentsData = {
    estatuaZeus: {
     name: 'Estatua de Zeus a Olimpia',
   details: { 
-      description: "L'estàtua de Zeus mesurava uns 12 metres d'alçada i estava feta d'ivori i or.era tan impressionant que es deia que si Zeus s'aixecava, trencaria el sostre del temple.",
+      description: "L'estàtua de Zeus mesurava uns 12 metres d'alçada i estava feta d'ivori i or. Era tan impressionant que es deia que si Zeus s'aixecava, trencaria el sostre del temple.",
       location: 'Olímpia, Grècia',
       civilization: 'Antiga Grècia',
       creationDate: 'c. 435 a.C.',
