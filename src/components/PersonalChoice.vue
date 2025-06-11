@@ -15,7 +15,7 @@ import { Heart } from 'lucide-vue-next';
         De totes les meravelles del món antic, el Far d'Alexandria és la que més em fascina. No era simplement una tomba o un temple, sinó una obra mestra de l'enginyeria amb un propòsit profundament humà i pràctic: guiar els mariners cap a la seguretat del port.
       </p>
       <p>
-        Imagine la seua llum brillant en la nit, un far d'esperança i coneixement que no només il·luminava la mar, sinó que també simbolitzava la grandesa d'Alexandria com a centre del saber. La seua combinació de bellesa arquitectònica, innovació tecnològica i funció altruista el converteix, per a mi, en la més inspiradora de totes.
+        La seua llum no només il·luminava la mar, sinó que també simbolitzava la grandesa d'Alexandria com a centre del saber. La seua combinació de bellesa arquitectònica i innovació tecnològica el converteix, per a mi, en la més important de totes.
       </p>
 
       <div class="image-container">
