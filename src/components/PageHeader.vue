@@ -13,7 +13,8 @@
 <style scoped>
 .page-header {
   text-align: center;
-  max-width: 800px; /* Evita que el subtítulo se haga demasiado ancho */
+  max-width: 800px; 
+  background-color: white;/* Evita que el subtítulo se haga demasiado ancho */
 }
 
 h1 {

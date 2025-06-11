@@ -71,6 +71,16 @@ onMounted(() => {
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-image: url('/fondoWarriors.svg');
+
+  /* 2. Repetimos la imagen en todas las direcciones para crear el patrón. */
+  background-repeat: repeat;
+
+  /* 
+    3. ¡LA MAGIA! Esto fija el fondo en su sitio. 
+    El contenido se desplazará por encima, pero el fondo no se moverá.
+  */
+  background-attachment: fixed;
 }
 body,
 button,
@@ -79,4 +89,5 @@ textarea,
 select {
   font-family: 'Gideon Roman', serif; /* 'serif' es la fuente de respaldo */
 }
+
 </style>
